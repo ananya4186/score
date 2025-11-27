@@ -1,15 +1,13 @@
-
 import sys
-
 
 default_scores = [50, 60, 70]
 
-if len(sys.argv) == 2:
+if len(sys.argv) == 2 and sys.argv[1].strip() != "":
     print("User provided scores:")
     text = sys.argv[1]
     scores = list(map(float, text.split()))
 else:
-    print("No parameter given — using default scores")
+    print("No valid parameter given — using default scores")
     scores = default_scores
 
 total = sum(scores)
